@@ -27,7 +27,7 @@ async function getWeatherData(city){
     const response = await fetch(apiUrl);
     console.log(response);
     if(!response.ok){
-        throw new Error("Could not fetch weather data");
+        throw new Error("Could not fetch \n weather data");
     }
     else{
         return await response.json();
@@ -107,4 +107,5 @@ function displayError(message){
     weatherCard.style.display = "flex";
     weatherCard.appendChild(errorDisplay);
 }
+
 
